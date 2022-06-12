@@ -8492,6 +8492,11 @@ watchpack@^2.3.1:
     glob-to-regexp "^0.4.1"
     graceful-fs "^4.1.2"
 
+wbox-context@^0.3.3:
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/wbox-context/-/wbox-context-0.3.3.tgz#08543f36cf11fffa4a40077fc9fc4470682c3de6"
+  integrity sha512-4FBzy0R2APWwXLEXsak4PppxrXI6frZaeeFG/oWUP8ChbQTIEnx36hVgyV8xQI1qeasnL0tMr+F2FZaSSdPkrw==
+
 wbox-details-ui@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/wbox-details-ui/-/wbox-details-ui-0.1.0.tgz#0a53922ec6aac6baed19796c8bb19111c504bc89"
