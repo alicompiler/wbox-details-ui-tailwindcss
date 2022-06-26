@@ -10,10 +10,18 @@ export interface DetailsGroupTheme {
     title: string;
     subtitle: string;
     item: {
+        wrapper: string;
+        wrapperStripped: string;
         title: string;
         value: string;
         action: string;
-    }
+    },
+    header: {
+        wrapper: string;
+        title: string;
+        subtitle: string;
+    },
+    detailsWrapper: string;
 }
 
 export interface Theme {

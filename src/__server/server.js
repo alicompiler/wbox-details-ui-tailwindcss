@@ -1,5 +1,3 @@
-/* eslint-disable no-undef */
-/* eslint-disable @typescript-eslint/no-var-requires */
 const express = require("express");
 const cors = require("cors");
 
@@ -8,35 +6,33 @@ const app = express()
 app.use(cors());
 app.use(express.json())
 
-const data = [
-    {id: 1 , name: 'Ali Faris' , age: 28 , height: 164, phone: '0101010101010' , email: 'ali@test.com'},
-    {id: 2 , name: 'Huda Sajed' , age: 27 , height: 157, phone: '0101010101010' , email: 'huda@test.com'},
-    {id: 3 , name: 'Fatima Ali' , age: 6 , height: 110, phone: '0101010101010' , email: 'fatima@test.com'},
-    {id: 4 , name: 'Mohammed Ali' , age: 2 , height: 80, phone: '0101010101010' , email: 'mohammed@test.com'},
-];
-
-let result = [...data];
-for(let i=0;i<500;i++){
-    result = result.concat([...data]);
-}
-result = result.map((item,index) => ({...item , id: index+1}));
-
-app.get('/collection', function (req, res) {
-
-    const page = req.query.page ?? 0;
-    const pageSize = 100;
-    const items = result.slice(page*pageSize , (page*pageSize) + pageSize);
+app.get('/data', function (req, res) {
     setTimeout(() => {
-        if(req.query.error){
+        if (req.query.error) {
             res.status(400);
             res.send();
             return;
         }
-        res.json({
-            data: items,
-            totalCount: result.length
-        });
-    } , 2000);
+        const item = {
+            name: 'Ali Faris',
+            birthDate: '1993-09-27',
+            country: 'Iraq',
+            city: 'Najaf',
+            jobTitle: 'Software Engineer',
+            image: 'https://media.moddb.com/images/members/5/4550/4549205/duck.jpg',
+            githubProfile: 'https://github.com/alicompiler',
+            skills: [
+                'Typescript',
+                'React',
+                'ASP.NET Core',
+                'NodeJS'
+            ],
+            email: 'ali@email.com',
+            phone: '+964780123456789',
+            about: 'Fugiat ipsum ipsum deserunt culpa aute sint do nostrud anim incididunt cillum culpa consequat. Excepteur qui ipsum aliquip consequat sint. Sit id mollit nulla mollit nostrud in ea officia proident. Irure nostrud pariatur mollit ad adipisicing reprehenderit deserunt qui eu.\n'
+        };
+        res.json(item);
+    }, 2000);
 });
 
 app.listen(8080, function () {

@@ -12,10 +12,18 @@ export const defaultTheme: Omit<Theme , "rightToLeft"> = {
         wrapperCard: 'bg-white shadow overflow-hidden sm:rounded-lg',
         title: 'text-lg leading-6 font-medium text-gray-900 dark:text-gray-100',
         subtitle:'mt-1 max-w-2xl text-sm text-gray-500',
+        detailsWrapper: 'border-t border-gray-200',
         item: {
+            wrapper: 'px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6',
+            wrapperStripped: 'bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6',
             title: 'text-sm font-medium text-gray-500',
-            value: 'mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2 dark:text-gray-100',
-            action: 'font-medium text-primary-600 hover:text-primary-500',
+            value: 'mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2',
+            action: 'font-medium text-indigo-600 hover:text-primary-500',
+        },
+        header: {
+            wrapper: 'px-4 py-5 sm:px-6',
+            title: 'text-lg leading-6 font-medium text-gray-900',
+            subtitle: 'mt-1 max-w-2xl text-sm text-gray-500'
         }
     }
 };
