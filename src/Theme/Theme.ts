@@ -15,7 +15,14 @@ export interface DetailsGroupTheme {
         title: string;
         value: string;
         action: string;
+        actionWrapper: string;
+        text: string;
     },
+    arrayItem: {
+        list: string;
+        item: string;
+        text: string;
+    }
     header: {
         wrapper: string;
         title: string;

@@ -24,6 +24,8 @@ export function Example() {
                           {name: 'githubProfile', title: 'Github Profile'},
                           {name: 'email', title: 'Email'},
                           {name: 'phone', title: 'Phone'},
+                          {name: 'skills', title: 'Skills'},
+                          {name: 'about', title: 'About'},
                       ]}
                       groups={[
                           {
@@ -31,7 +33,16 @@ export function Example() {
                               component: DetailsGroup,
                               options: {
                                   title: 'Basic Info',
-                                  actions: {},
+                                  actions: {
+                                      image: {
+                                          text: 'Open Image',
+                                          onClick: (value: string) => window.open(value, '_target'),
+                                      },
+                                      githubProfile: {
+                                          text: 'Open',
+                                          onClick: (value: string) => window.open(value, '_target'),
+                                      }
+                                  },
                                   subtitle: 'Personal information',
                                   stripped: true,
                               } as DetailsOptions

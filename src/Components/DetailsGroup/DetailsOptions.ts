@@ -1,11 +1,11 @@
 export interface DetailsAction {
     text: string;
-    onClick: () => void;
+    onClick: (value: unknown, data: unknown) => void;
 }
 
 export interface DetailsOptions {
     title: string;
     subtitle?: string;
     stripped?: boolean;
-    actions: Record<string, DetailsAction>
+    actions?: Record<string, DetailsAction>
 }
